@@ -7,32 +7,19 @@ return {
 
       require("toggleterm").setup({
         shell = shell,
-        open_mapping = [[<leader>th]],
-        direction = "horizontal",
+        direction = "float",
         shade_terminals = true,
         start_in_insert = true,
         persist_mode = true,
-        persist_size = true,
         close_on_exit = true,
       })
 
-      -- Keymaps
       local Terminal = require("toggleterm.terminal").Terminal
 
-      -- Toggle horizontal terminal
-      vim.keymap.set({ "n", "t" }, "<leader>th", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
-
-      -- Floating terminal (changed keybinding to Ctrl + j)
       local float_term = Terminal:new({ direction = "float", hidden = true })
-      vim.keymap.set({ "n", "t" }, "<leader>tf", function()
+      vim.keymap.set({ "n", "t" }, "<C-j>", function()
         float_term:toggle()
       end, { desc = "Toggle floating terminal" })
-
-      -- Vertical terminal
-      local vertical_term = Terminal:new({ direction = "vertical", hidden = true })
-      vim.keymap.set({ "n", "t" }, "<leader>tv", function()
-        vertical_term:toggle()
-      end, { desc = "Toggle vertical terminal" })
     end,
   },
 }
