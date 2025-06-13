@@ -14,24 +14,28 @@ return {
       -- Apply colorscheme
       vim.cmd("colorscheme onedark_dark")
 
-      -- ✅ Relative line numbers in white
+      -- ✅ Set highlight groups *after* colorscheme is applied
+
+      -- Relative line numbers in white
       vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff" })
 
-      -- ✅ Current line number (absolute) in green
-      vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#00ff00", bold = true })
+      -- Current line number (absolute) in green
+      vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#000000", bold = true })
 
-      -- ✅ Folder icons and names (closed folders) in LightSkyBlue
-      vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", { fg = "#87CEFA" })
-      vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = "#87CEFA" })
-      vim.api.nvim_set_hl(0, "DevIconFolder", { fg = "#87CEFA" })
+      -- Active/open folder name in green
+      vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#00ffff", bold = true })
 
-      -- ✅ Active/open folder name in green
-      vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#00ff00", bold = true })
+      -- Folder icons and names (closed folders) in sky blue
+      local sky_blue = "#00ffff"
+      vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", { fg = sky_blue })
+      vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = sky_blue })
+      vim.api.nvim_set_hl(0, "DevIconFolder", { fg = sky_blue })
 
-      -- ✅ Root folder line (e.g. ~/.config/nvim) in green
-      vim.api.nvim_set_hl(0, "NvimTreeRootFolder", { fg = "#00ff00", bold = true })
+      -- Root folder line (e.g. ~/.config/nvim) in green
+      vim.api.nvim_set_hl(0, "NvimTreeRootFolder", { fg ="#ffff00" , bold = true })
 
-      -- ✅ Terminal cursor color to white
+
+      -- Terminal cursor color to white
       vim.api.nvim_set_hl(0, "TermCursor", { fg = "#ffffff", bg = "#ffffff" })
     end,
   },
