@@ -24,7 +24,7 @@ return {
 
       -- Floating terminal (changed keybinding to Ctrl + j)
       local float_term = Terminal:new({ direction = "float", hidden = true })
-      vim.keymap.set({ "n", "t" }, "<C-j>", function()
+      vim.keymap.set({ "n", "t" }, "<leader>tf", function()
         float_term:toggle()
       end, { desc = "Toggle floating terminal" })
 
