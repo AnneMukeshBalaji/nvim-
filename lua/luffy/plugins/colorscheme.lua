@@ -1,28 +1,24 @@
-return{
-  "catppuccin/nvim",
-  name = "catppuccin",
-  priority = 1000,
+return {
+  "folke/tokyonight.nvim",
+  name = "tokyonight",
   lazy = false,
+  priority = 1000,
   config = function()
-    require("catppuccin").setup({
-      flavour = "mocha", -- latte, frappe, macchiato, mocha
-      transparent_background = true,
-      background = {
-        light = "latte",
-        dark = "mocha",
-      },
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        telescope = true,
-        notify = true,
-        mini = true,
-        -- Add more plugin integrations if needed
+    require("tokyonight").setup({
+      style = "night", -- Options: "storm", "moon", "night", "day"
+      transparent = true, -- Make background transparent
+      terminal_colors = true,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+        functions = {},
+        variables = {},
+        sidebars = "transparent", -- also make sidebar (like NvimTree) transparent
+        floats = "transparent", -- make floating windows transparent
       },
     })
 
-    vim.cmd.colorscheme("catppuccin")
+    vim.cmd("colorscheme tokyonight")
   end,
 }
 
