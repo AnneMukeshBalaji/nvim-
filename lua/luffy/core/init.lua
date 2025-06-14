@@ -5,7 +5,6 @@ return {
   -- plugin list here
   { "neovim/nvim-lspconfig", ... },
   { "nvim-treesitter/nvim-treesitter", ... },
-  ...,
-    vim.opt.wrap = true
+  ...
 }
 
