@@ -9,8 +9,8 @@ return {
       transparent = true, -- Make background transparent
       terminal_colors = true,
       styles = {
-        comments = { bold = true },
-        keywords = { bold = true },
+        comments = { bold = false },
+        keywords = { italic = false },
         functions = {},
         variables = {},
         sidebars = "transparent", -- also make sidebar (like NvimTree) transparent
@@ -21,4 +21,5 @@ return {
     vim.cmd("colorscheme tokyonight")
   end,
 }
+
 

@@ -17,7 +17,7 @@ return {
       local Terminal = require("toggleterm.terminal").Terminal
 
       local float_term = Terminal:new({ direction = "float", hidden = true })
-      vim.keymap.set({ "n", "t" }, "<C-j>", function()
+      vim.keymap.set({ "n", "t" }, "<leader>j", function()
         float_term:toggle()
       end, { desc = "Toggle floating terminal" })
     end,
