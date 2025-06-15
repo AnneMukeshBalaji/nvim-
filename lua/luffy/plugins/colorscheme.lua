@@ -9,8 +9,8 @@ return {
       transparent = true,
       terminal_colors = true,
       styles = {
-        comments = { bold = false },
-        keywords = { italic = false },
+        comments = { italic = false, bold = true },
+        keywords = { italic = false ,bold = false }, 
         functions = {},
         variables = {},
         sidebars = "transparent",
