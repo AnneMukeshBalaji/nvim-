@@ -30,4 +30,4 @@ vim.api.nvim_set_keymap("n", "<leader>cc", ":CccConvert<CR>", { noremap = true, 
 vim.api.nvim_set_keymap("n", "<leader>ch", ":CccHighlighterToggle<CR>", { noremap = true, silent = true })
 -- Map <C-a> to select all text in the file (like Ctrl + A)
 vim.api.nvim_set_keymap('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
-
+vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
